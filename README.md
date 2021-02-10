@@ -10,12 +10,8 @@ To install this project you must create a database named `autoparts_market` on M
 After that you must install all dependencies of the project with `composer install` command.
 
 ## Step 3
-So you will need to migrate the database with `php artisan migrate` command
-
-## Step 4
-And finally you need to use `php artisan db:seed` command to seed all data on database
-
-# The ```Env``` file
+Configure your env file like below
+### The ```Env``` file
 the env file must looks like this:
 
 ```
@@ -70,4 +66,11 @@ MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
 MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 ```
 
-# 
+## Step 4
+So you will need to migrate the database with `php artisan migrate` command
+
+## Step 5
+Now you need to use `php artisan db:seed` command to seed all data on database
+
+## Step 6 - FINAL
+Finally you must use `php artisan serve` to run the application on port `8000`
