@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\AutoPart;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
@@ -47,6 +48,10 @@ class RouteServiceProvider extends ServiceProvider
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
         });
+
+        Route::pattern('autopart_id', '[0-9]+');
+        Route::pattern('automodel_id', '[0-9]+');
+        Route::pattern('autobrand_id', '[0-9]+');
     }
 
     /**

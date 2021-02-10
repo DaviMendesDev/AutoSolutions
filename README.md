@@ -1,6 +1,20 @@
 # AutoSolutions
 An auto parts marketplace website
 
+# Installation
+
+## Step 1
+To install this project you must create a database named `autoparts_market` on MySQL.
+
+## Step 2
+After that you must install all dependencies of the project with `composer install` command.
+
+## Step 3
+So you will need to migrate the database with `php artisan migrate` command
+
+## Step 4
+And finally you need to use `php artisan db:seed` command to seed all data on database
+
 # The ```Env``` file
 the env file must looks like this:
 
@@ -36,10 +50,10 @@ REDIS_PORT=6379
 MAIL_MAILER=smtp
 MAIL_HOST=mailhog
 MAIL_PORT=1025
-MAIL_USERNAME=null
-MAIL_PASSWORD=null
-MAIL_ENCRYPTION=null
-MAIL_FROM_ADDRESS=null
+MAIL_USERNAME=<your credential>
+MAIL_PASSWORD=<your credential>
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=<your credential>
 MAIL_FROM_NAME="${APP_NAME}"
 
 AWS_ACCESS_KEY_ID=
@@ -55,3 +69,5 @@ PUSHER_APP_CLUSTER=mt1
 MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
 MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 ```
+
+# 
